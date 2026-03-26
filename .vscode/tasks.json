@@ -3,20 +3,23 @@
   "tasks": [
     {
       "label": "build",
-      "type": "npm",
-      "script": "build",
+      "type": "process",
+      "command": "npm",
+      "args": ["run", "build"],
       "group": "build"
     },
     {
       "label": "test",
-      "type": "npm",
-      "script": "test",
+      "type": "process",
+      "command": "npm",
+      "args": ["run", "test"],
       "group": "test"
     },
     {
       "label": "lint",
-      "type": "npm",
-      "script": "lint",
+      "type": "process",
+      "command": "npm",
+      "args": ["run", "lint"],
       "problemMatcher": {
         "owner": "oxlint",
         "source": "oxlint",
