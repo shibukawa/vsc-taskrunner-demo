@@ -1,0 +1,17 @@
+{
+  "name": "vsc-taskrunner-demo",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest run",
+    "lint": "oxlint ."
+  },
+  "devDependencies": {
+    "oxlint": "^1.0.0",
+    "vite": "^7.1.0",
+    "vitest": "^3.2.0"
+  }
+}
