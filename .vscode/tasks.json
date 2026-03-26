@@ -1,5 +1,29 @@
 {
   "version": "2.0.0",
+  "inputs": [
+    {
+      "id": "demoMessage",
+      "type": "promptString",
+      "description": "Message to print",
+      "default": "hello from main"
+    },
+    {
+      "id": "demoMode",
+      "type": "pickString",
+      "description": "Select a mode",
+      "default": "preview",
+      "options": [
+        {
+          "label": "Preview",
+          "value": "preview"
+        },
+        {
+          "label": "Release",
+          "value": "release"
+        }
+      ]
+    }
+  ],
   "tasks": [
     {
       "label": "build",
@@ -50,8 +74,8 @@
       "args": [
         "-e",
         "console.log('message=' + process.argv[1] + ' mode=' + process.argv[2])",
-        "${env:DEMO_MESSAGE}",
-        "${env:DEMO_MODE}"
+        "${input:demoMessage}",
+        "${input:demoMode}"
       ]
     }
   ]
