@@ -16,7 +16,29 @@
     {
       "label": "lint",
       "type": "npm",
-      "script": "lint"
+      "script": "lint",
+      "problemMatcher": {
+        "owner": "oxlint",
+        "source": "oxlint",
+        "severity": "error",
+        "fileLocation": [
+          "relative",
+          "${workspaceFolder}"
+        ],
+        "pattern": [
+          {
+            "regexp": "^\\s+!\\s+([^\\(]+)\\(([^\\)]+)\\):\\s+(.*)$",
+            "code": 2,
+            "message": 3
+          },
+          {
+            "regexp": "^\\s+,-\\[(.+):(\\d+):(\\d+)\\]$",
+            "file": 1,
+            "line": 2,
+            "column": 3
+          }
+        ]
+      }
     }
   ]
 }
