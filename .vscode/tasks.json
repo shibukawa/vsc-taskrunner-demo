@@ -77,6 +77,52 @@
         "${input:demoMessage}",
         "${input:demoMode}"
       ]
+    },
+    {
+      "label": "demo-parallel-left",
+      "type": "process",
+      "command": "node",
+      "args": ["scripts/task-step.mjs", "parallel-left", "700"]
+    },
+    {
+      "label": "demo-parallel-right",
+      "type": "process",
+      "command": "node",
+      "args": ["scripts/task-step.mjs", "parallel-right", "1200"]
+    },
+    {
+      "label": "demo-parallel",
+      "type": "process",
+      "command": "node",
+      "args": ["scripts/task-step.mjs", "parallel-join", "200"],
+      "dependsOn": ["demo-parallel-left", "demo-parallel-right"]
+    },
+    {
+      "label": "demo-sequence-first",
+      "type": "process",
+      "command": "node",
+      "args": ["scripts/task-step.mjs", "sequence-first", "400"]
+    },
+    {
+      "label": "demo-sequence-second",
+      "type": "process",
+      "command": "node",
+      "args": ["scripts/task-step.mjs", "sequence-second", "400"]
+    },
+    {
+      "label": "demo-sequence",
+      "type": "process",
+      "command": "node",
+      "args": ["scripts/task-step.mjs", "sequence-done", "200"],
+      "dependsOn": ["demo-sequence-first", "demo-sequence-second"],
+      "dependsOrder": "sequence"
+    },
+    {
+      "label": "demo-mixed",
+      "type": "process",
+      "command": "node",
+      "args": ["scripts/task-step.mjs", "mixed-finish", "150"],
+      "dependsOn": ["demo-parallel", "demo-sequence"]
     }
   ]
 }
