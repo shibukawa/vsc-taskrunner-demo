@@ -79,6 +79,15 @@
       ]
     },
     {
+      "label": "no-checkout-demo",
+      "type": "process",
+      "command": "node",
+      "args": [
+        "-e",
+        "console.log(JSON.stringify({ task: 'no-checkout-demo', pid: process.pid, node: process.version, platform: process.platform, cwd: process.cwd() }))"
+      ]
+    },
+    {
       "label": "demo-parallel-left",
       "type": "process",
       "command": "node",
