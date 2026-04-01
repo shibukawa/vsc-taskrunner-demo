@@ -132,6 +132,12 @@
       "command": "node",
       "args": ["scripts/task-step.mjs", "mixed-finish", "150"],
       "dependsOn": ["demo-parallel", "demo-sequence"]
+    },
+    {
+      "label": "scheduled-log",
+      "type": "process",
+      "command": "npm",
+      "args": ["run", "scheduled-log"]
     }
   ]
 }

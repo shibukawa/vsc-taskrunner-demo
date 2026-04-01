@@ -11,6 +11,7 @@ npm install
 ## Tasks
 
 - `build`: runs `vite build`
+- `scheduled-log`: writes the execution time to `dist/scheduled-run.txt`
 - `test`: runs `vitest run`
 - `lint`: runs `oxlint .`
 - `show-input`: demonstrates a task that reads VS Code inputs on `main`

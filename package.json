@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "scheduled-log": "node src/scheduled-log.js",
     "test": "vitest run",
     "lint": "oxlint ."
   },
